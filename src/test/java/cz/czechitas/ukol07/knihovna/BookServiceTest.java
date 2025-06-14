@@ -54,7 +54,7 @@ class BookServiceTest {
     assertEquals("V zámku a podzámčí", resultPositiveTwoBooks.get(0).getNazev());
     assertEquals("Divá Bára", resultPositiveTwoBooks.get(1).getNazev());
 
-    List<Book> resultNegative = bookService.getBooksByYear(1967);;
+    List<Book> resultNegative = bookService.getBooksByYear(1967);
     assertTrue(resultNegative.isEmpty());
   }
 
