@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class BookService {
-  private List<Book> books;
+  private final List<Book> books;
 
-
+  // class constructor
   public BookService() throws IOException {
     InputStream inputStream = BookService.class.getResourceAsStream("knihy.json");
     ObjectMapper objectMapper = new ObjectMapper();

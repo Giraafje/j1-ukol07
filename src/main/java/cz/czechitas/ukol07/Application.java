@@ -23,10 +23,10 @@ public class Application {
 
     System.out.println("\n");
 
-    System.out.println("Books written in 1845:");
-    List<Book> booksByWrittenIn1845 = bookService.getBooksByYear(1845);
-    for (Book book : booksByWrittenIn1845) {
-      System.out.println(book.getNazev());
+    System.out.println("Books issued in 1845:");
+    List<Book> booksWrittenIn1845 = bookService.getBooksByYear(1845);
+    for (Book book : booksWrittenIn1845) {
+      System.out.println(book.getAutor() + ": " + book.getNazev());
     }
 
   }
