@@ -10,6 +10,9 @@ public class Book {
   }
 
   public void setAutor(String autor) {
+    if (autor == null || autor.isEmpty()) {
+      throw new IllegalArgumentException("Author cannot be null or empty");
+    }
     this.autor = autor;
   }
 
@@ -18,6 +21,9 @@ public class Book {
   }
 
   public void setNazev(String nazev) {
+    if (nazev == null || nazev.isEmpty()) {
+      throw new IllegalArgumentException("Title cannot be null or empty");
+    }
     this.nazev = nazev;
   }
 
@@ -26,6 +32,9 @@ public class Book {
   }
 
   public void setRokVydani(int rokVydani) {
+    if (rokVydani < 1440) {
+      throw new IllegalArgumentException("Book printing was invented in 1440");
+    }
     this.rokVydani = rokVydani;
   }
 }
